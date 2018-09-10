@@ -1,0 +1,49 @@
+﻿/* chatbot BG */
+/*.mainBG{background:url(../image/chatbotStyle/psa_bg2.png) no-repeat center 10%; background-attachment:fixed; width:100%}*/
+.botBtnPosition{position:absolute;top:360px;left:25%}
+.banner{background:url(../image/chatbotStyle/btn_chatlink.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);}
+.banner:hover{background:url(../image/chatbotStyle/btn_chatlink_hover.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);cursor:pointer}
+
+/* chat TOP */
+.chatTitle{background: url("../image/chatbotStyle/ico_top.png") no-repeat; height:16px;width:16px; display: inline-block;top: 12px; position: absolute; }
+.chatTitleText{font-size:13px;color:#FFF;top: 10px;left:30px; position: absolute;}
+.topIcon01{background: url("../image/chatbotStyle/btn_down.png") no-repeat;  width:14px;height:13px;display: inline-block;top: 14px; right: 58px;position: absolute} 
+.topIcon02{background: url("../image/chatbotStyle/btn_fsize.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
+.topIcon02-1{background: url("../image/chatbotStyle/btn_fsize_02.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
+.topIcon03{background: url("../image/chatbotStyle/btn_close.png") no-repeat;  width:13px;height:13px;display: inline-block;top: 14px; right: 10px;position: absolute;}
+.topIcon{width:12px; height:12px;cursor:pointer;margin:7px 3px 0 9px;float:right}
+.topGestureArea{float:right}
+.topGestureIcon{color:#302f35 !important}
+
+/* chat view */
+.wc-list{background-color: #f1f3f6}
+.wc-card{margin-bottom:18px}
+.timeStampBot{font-size: 12px; color: #868a8f;line-height: 15px; text-align: left; background: #f1f3f6;padding-top: 3px !important; position:absolute; bottom:0}
+.timeStampUser{font-size: 12px;color: #868a8f;line-height: 15px;text-align: right;padding-top:3px !important}
+.ac-container{padding:6px 6px 6px 12px !important; border-radius:5px; max-width:312px}
+
+/* chat input */
+.wc-menu{cursor: pointer;display: inline-block;width:60px;height: 50px;background-color: #fff;}
+.menuIcon{width:42px;height:23px;background-color:#00aad2;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}
+.sendIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}
+.menuBox{background-color:#fff;width:250px;height:62px;position:absolute;bottom:53px;display:none;text-align:center;box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC; border-radius: 4px;}
+.menuReStartBtn{color:#fff;background-color:#302f35;height:30px;font-size:12px}
+.menuReStartBtn > span {position:relative; top:5px}
+.menuSelectBtn{border-top:1px solid #f0f1f4; width:100%; height:30px;}
+.menuSelectBtn > span {position:relative; top:4px}
+
+/* media Icon */
+.playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:45%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+
+/* popup Area */
+.popupArea{opacity:0;position: absolute;right:0;bottom: 174px;width:570px;height:354px;display:none;background-color:#fff}
+.popupTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
+.popHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 571px; position: relative;}
+.popBody{background-color: #fbfbfb;height:318px; position: relative;}
+.btnTopClose{background: url("../image/chatbotStyle/btn_close.png") no-repeat;  width:17px;height:17px;display: inline-block;top: 13px; right: 10px;position: absolute;border:none;}
+
+/* gesture Area */
+.gestureArea{opacity:1;position: absolute;right:381px;bottom:0;width:250px;height:528px;display:none;background-color:#fff}
+.gestureTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
+.gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}
+.gestureBody{background-color: #fbfbfb;height:490px; position: relative;}

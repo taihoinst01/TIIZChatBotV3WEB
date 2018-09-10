@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta name="viewport" content="width=380" />
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/botchat.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/start.js"></script>
+    <script type="text/javascript" src="assets/js/ui.js"></script>
+    <script type="text/javascript" src="assets/js/autocompleteword.js"></script>
+
+    <!-- gesture script -->
+    <!--<script type="text/javascript" src="assets/js/gesture/jquery-1.11.0.min.js"></script>-->
+    <script type="text/javascript" src="assets/js/gesture/three.js"></script>
+    <script type="text/javascript" src="assets/js/gesture/OrbitControls.js"></script>
+    <script type="text/javascript" src="assets/js/gesture/inflate.min.js"></script>
+    <script type="text/javascript" src="assets/js/gesture/FBXLoader.js"></script>
+    <script type="text/javascript" src="assets/js/gesture/Detector.js"></script>
+    <script type="text/javascript" src="assets/js/gesture/stats.min.js"></script>
+    <script type="text/javascript" src="assets/js/gesture/gesture.js"></script>
+
+    <!--<script type="text/javascript">
+        $(function () {
+            $('.mainBG').css({ 'height': ($(document).height()) + 'px' });
+            $(window).resize(function () {
+                $('.mainBG').css({ 'height': ($(document).height()) + 'px' });
+            });
+        });
+    </script>-->
+</head>
+<body>
+    <div class="mainBG">
+        <!--<img src="assets/image/chatbotStyle/psa_background.png" />-->
+        <div id="wrapper">
+            <div id="navi-header-wrap">
+                <div class="banner" id="botChatBtn">
+
+                    <!--<p class="botBtnPosition">
+                        <a id="botChatBtn" class="botStartBtn" href="javascript:void(0);">
+                            챗봇과 대화하기
+                        </a>
+                    </p>-->
+                </div>
+            </div>
+        </div>
+        <!-- 여기서 부터 -->
+        <div class="bot-wrap chatOn">
+            <div id="bot" />
+            <script src="assets/js/botchat.js"></script>
+            <script>
+                BotChat.App({
+                    directLine: {
+                        secret: 'RHbDb2qcax0.cwA.JNw.vM8QYMWi__1NO2hpLV5s4yNbZqCMH0S_kq6CSErijjc'
+                        //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
+                    },    //TimeSolution 
+                    user: { id: 'userid' },
+                    bot: { id: 'botid' },
+                    resize: 'detect'
+                }, document.getElementById("bot"));
+            </script>
+        </div>
+        <!-- 끝 -->
+    </div>
+</body>
+</html>
