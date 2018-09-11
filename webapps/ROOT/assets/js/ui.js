@@ -143,6 +143,59 @@ $(function () {
     //    //playAnimation('ChatBot_AinTest02');
     //    playAnimation('ChatBot_AniAll01');
     //});
+
+    //현재위치사용승인
+    $(document).on('click', '.wc-card > .wc-card-buttons > li > button:contains("현재 위치 사용 승인")', function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+            //alert("현재 위치: 위도(" + pos.lat + "), 경도(" + pos.lng + ")");
+            var directLineUrl = "https://northamerica.directline.botframework.com";
+            var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST
+
+            var info = JSON.stringify({
+                type: 'message',
+                text: 'current location:' + pos.lat + ':' + pos.lng,
+                from: { id: 'userid' },
+            });
+            $.ajax({
+                type: "POST",
+                url: directLineUrl + "/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
+                data: info,
+                //dataType : "json",
+                headers: {
+                    "Authorization": "Bearer " + secretKey,
+                    'Content-Type': 'application/json'
+                },
+                success: function (data) {
+                },
+                error: function (e) {
+                }
+            });
+        }, function (error) {
+            //alert("에러: " + error.message);
+            var directLineUrl = "https://northamerica.directline.botframework.com";
+            var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST
+            var info = JSON.stringify({
+                type: 'message',
+                text: '직접 검색',
+                from: { id: 'userid' },
+            })
+            $.ajax({
+                type: "POST",
+                url: directLineUrl + "/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
+                data: info,
+                //dataType : "json",
+                headers: {
+                    "Authorization": "Bearer " + secretKey,
+                    'Content-Type': 'application/json'
+                },
+                success: function (data) {
+                },
+                error: function (e) {
+                }
+            });
+        });
+    });	
 });
 
 //챗봇 메뉴 처음으로 돌아가기
