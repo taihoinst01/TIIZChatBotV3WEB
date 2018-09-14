@@ -60,7 +60,6 @@ $(function () {
         "<div class='gesture-wrapper gestureArea'>" +
             "<div class='gestureHeader'>" +
                 "<span id='gestureTitle' class='gestureTitle'></span>" +
-                "<button class='btnTopClose'></button>" +
             "</div>" +
             "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
             "</div>" +
