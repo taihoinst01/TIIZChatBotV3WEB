@@ -34,9 +34,13 @@
 .menuReStartBtn > span {position:relative; top:5px}
 .menuSelectBtn{border-top:1px solid #f0f1f4; width:100%; height:30px;}
 .menuSelectBtn > span {position:relative; top:4px}
+.ttsMicBlack{background: url("../image/chatbotStyle/micBlack_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}
+.ttsMicRed{background: url("../image/chatbotStyle/micRed_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}
 
 /* media Icon */
-.playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:45%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+.playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+.imgImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+.mapImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
 
 /* popup Area */
 .popupArea{opacity:0;position: absolute;right:0;bottom: 174px;width:570px;height:354px;display:none;background-color:#fff;z-index:1500}

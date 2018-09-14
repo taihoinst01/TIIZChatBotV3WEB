@@ -79,13 +79,17 @@ $(function () {
     //챗봇 메뉴창 생성
     $(".wc-chatview-panel > div").add(
         "<div class='menuBox off'>" +
-        "<p class='menuReStartBtn'><span> Menu </span></p>" +
-        "<ul>" +
-        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident analysis')'> Accident analysis </span></a></li>" +
-        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident trends')'> Accident trends </span></a></li>" +
-        "<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-        "</ul>" +
+            "<p class='menuReStartBtn'><span> Menu </span></p>" +
+            "<ul>" +
+            //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident analysis')'> Accident analysis </span></a></li>" +
+            //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident trends')'> Accident trends </span></a></li>" +
+            "<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
+            "</ul>" +
         "</div > ").appendTo(".wc-chatview-panel");
+
+    //챗봇 마이크 생성
+    $(".wc-console > div").add(
+        "<div class='ttsMic ttsMicBlack'>&nbsp</div > ").appendTo(".wc-console");
 
     //챗봇창 버튼 동작
     $('.btnClose').click(function () {
@@ -276,6 +280,17 @@ $(function () {
         });
         $('.map-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
         //$(this).parent().addClass('on');
+    });
+
+    //마이크 ON/OFF
+    $('.ttsMic').click(function () {
+        if ($(this).hasClass('ttsMicBlack')) {
+            $('.ttsMic').removeClass('ttsMicBlack');
+            $('.ttsMic').addClass('ttsMicRed');
+        } else {
+            $('.ttsMic').removeClass('ttsMicRed');
+            $('.ttsMic').addClass('ttsMicBlack');
+        }
     });
 });
 
