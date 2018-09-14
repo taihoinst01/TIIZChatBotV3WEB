@@ -3394,7 +3394,9 @@
                 return t.prototype.checkConnection = function(t) {
                     var e = this;
                     void 0 === t && (t = !1);
-                    var n = this.connectionStatus$.flatMap(function(t) {
+                    var n = this.connectionStatus$.flatMap(function (t) {
+                        //conversationId 추가
+                        $('#conversationId').val(e.conversationId);
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
                             e.conversationId = t.conversationId, e.token = e.secret || t.token, e.streamUrl = t.streamUrl, e.referenceGrammarId = t.referenceGrammarId, e.secret || e.refreshTokenLoop(), e.connectionStatus$.next(s.Online)
                         }, function(t) {

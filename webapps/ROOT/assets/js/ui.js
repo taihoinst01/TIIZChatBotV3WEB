@@ -159,11 +159,14 @@ $(function () {
     });
 
     //현재위치사용승인
-    $(document).on('click', '.wc-card > .wc-card-buttons > li > button:contains("현재 위치 사용 승인")', function () {
+    //$(document).on('click', '.wc-card > .wc-card-buttons > li > button:contains("현재 위치 사용 승인")', function () {
+    $(document).on('click', '.wc-carousel-item button:contains("현재 위치 사용 승인")', function () {
         navigator.geolocation.getCurrentPosition(function (position) {
             var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
-            //alert("현재 위치: 위도(" + pos.lat + "), 경도(" + pos.lng + ")");
-            var directLineUrl = "https://northamerica.directline.botframework.com";
+            alert("현재 위치: 위도(" + pos.lat + "), 경도(" + pos.lng + ")");
+            alert($('#conversationId').val());
+            //var directLineUrl = "https://northamerica.directline.botframework.com";
+            var directLineUrl = "https://directline.botframework.com";
             var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST
 
             var info = JSON.stringify({
@@ -181,13 +184,16 @@ $(function () {
                     'Content-Type': 'application/json'
                 },
                 success: function (data) {
+                    //window.location.assign('https://openapi.naver.com/v1/map/staticmap.bin?clientId=dXUekyWEBhyYa2zD2s33&url=file:///C:/Users/user/Desktop&crs=EPSG:4326&center=127.1141382,37.3599968&level=10&w=320&h=320&baselayer=default&markers=127.1141382,37.3599968');
                 },
                 error: function (e) {
+                    alert("error1");
                 }
             });
         }, function (error) {
             //alert("에러: " + error.message);
-            var directLineUrl = "https://northamerica.directline.botframework.com";
+            //var directLineUrl = "https://northamerica.directline.botframework.com";
+            var directLineUrl = "https://directline.botframework.com";
             var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST
             var info = JSON.stringify({
                 type: 'message',
@@ -206,6 +212,7 @@ $(function () {
                 success: function (data) {
                 },
                 error: function (e) {
+                    alert("error2");
                 }
             });
         });
