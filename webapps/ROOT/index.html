@@ -28,15 +28,6 @@
     <script type="text/javascript" src="assets/js/gesture/Detector.js"></script>
     <script type="text/javascript" src="assets/js/gesture/stats.min.js"></script>
     <script type="text/javascript" src="assets/js/gesture/gesture.js"></script>
-
-    <!--<script type="text/javascript">
-        $(function () {
-            $('.mainBG').css({ 'height': ($(document).height()) + 'px' });
-            $(window).resize(function () {
-                $('.mainBG').css({ 'height': ($(document).height()) + 'px' });
-            });
-        });
-    </script>-->
 </head>
 <body>
     <input type="hidden" id="conversationId">
@@ -44,14 +35,7 @@
         <!--<img src="assets/image/chatbotStyle/psa_background.png" />-->
         <div id="wrapper">
             <div id="navi-header-wrap">
-                <div class="banner" id="botChatBtn">
-
-                    <!--<p class="botBtnPosition">
-                        <a id="botChatBtn" class="botStartBtn" href="javascript:void(0);">
-                            챗봇과 대화하기
-                        </a>
-                    </p>-->
-                </div>
+                <div class="banner" id="botChatBtn"></div>
             </div>
         </div>
         <!-- 여기서 부터 -->
@@ -61,9 +45,9 @@
             <script>
                 BotChat.App({
                     directLine: {
-                        secret: 'FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I'
+                        secret: 'FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I'   //TIIZChatBotV3Web
                         //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
-                    },    //TimeSolution
+                    },
                     user: { id: 'userid' },
                     bot: { id: 'botid' },
                     resize: 'detect'
