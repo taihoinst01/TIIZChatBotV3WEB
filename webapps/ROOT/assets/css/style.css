@@ -12,8 +12,11 @@
 .topIcon02-1{background: url("../image/chatbotStyle/btn_fsize_02.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
 .topIcon03{background: url("../image/chatbotStyle/btn_close.png") no-repeat;  width:13px;height:13px;display: inline-block;top: 14px; right: 10px;position: absolute;}
 .topIcon{width:12px; height:12px;cursor:pointer;margin:7px 3px 0 9px;float:right}
-.topGestureArea{float:right}
-.topGestureIcon{color:#302f35 !important}
+.topGestureArea{float:right;background:gray;width:65px;height:22px;cursor:pointer}
+.topGestureIcon{color:#302f35 !important;background:#fff;width:30px;height:22px;display:inline-block;float:right}
+.topGestureOn{display:inline-block;position:absolute;top:9px;margin-left:35px}
+.topGestureOff{display:inline-block;position:absolute;top:9px;margin-left:5px}
+
 
 /* chat view */
 .wc-list{background-color: #f1f3f6}
@@ -36,14 +39,14 @@
 .playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:45%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
 
 /* popup Area */
-.popupArea{opacity:0;position: absolute;right:0;bottom: 174px;width:570px;height:354px;display:none;background-color:#fff}
+.popupArea{opacity:0;position: absolute;right:0;bottom: 174px;width:570px;height:354px;display:none;background-color:#fff;z-index:1500}
 .popupTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
 .popHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 571px; position: relative;}
 .popBody{background-color: #fbfbfb;height:318px; position: relative;}
 .btnTopClose{background: url("../image/chatbotStyle/btn_close.png") no-repeat;  width:17px;height:17px;display: inline-block;top: 13px; right: 10px;position: absolute;border:none;}
 
 /* gesture Area */
-.gestureArea{opacity:1;position: absolute;right:381px;bottom:0;width:250px;height:528px;display:none;background-color:#fff}
+.gestureArea{opacity:1;position: absolute;right:381px;bottom:0;width:250px;height:528px;display:none;background-color:#fff;z-index:1000}
 .gestureTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
 .gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}
 .gestureBody{background-color: #fbfbfb;height:490px; position: relative;}
