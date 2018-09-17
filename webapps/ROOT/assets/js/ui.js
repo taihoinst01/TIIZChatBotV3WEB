@@ -12,9 +12,8 @@ $(function () {
                 "<button class='btnTopClose'></button>" +
             "</div>" +
             "<div id='reelArea' class='popBody'>" +
-                "<button class='btnPopRight'></button>" +
                 "<div class='imgBox' id='phantom black'>" +
-                    "<img src='https://bottest.hyundai.com/assets/images/price/360/phantom black/00001.jpg' alt='' class='reel' id='image' data-images='https://bottest.hyundai.com/assets/images/price/360/phantom black/000##.jpg' data-frames='60' data-cw='true' />" +
+                    "<img src='assets/image/car/00001.jpg' alt='' class='reel' id='image' data-images='assets/image/car/000##.jpg' data-frames='60' data-cw='true' />" +
                 "</div>" +
                 "<div class='popTxt'>" +
                     "<span>좌우로 드래그하여 돌려보세요.</span>" +
@@ -97,18 +96,24 @@ $(function () {
         $('.bot-wrap').hide().removeClass("chatOn").addClass("chatOff");
     });
     $('.btnMin').click(function () {
+        $('.btnTopClose').click();
         $('.wc-chatview-panel').css({ "overflow": "hidden" });
-        $('.wc-chatview-panel').animate({ "height": "32px" }, "fast");
+        $('.wc-chatview-panel').animate({ "height": "38px" }, "fast");
+        $('.gestureArea').animate({ "height": "38px" }, "fast");
         $('.wc-console, wc-message-pane').hide();
+        $('#animationDiv').hide();
         $('.btnMin').css({ 'display': 'none' });
         $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
         $('.btnLayer > button').removeClass('topIcon02').addClass('topIcon02-1');
     });
     $(document).on('click', '.wc-header [class*=btnLayer]', function () {
         if ($(this).hasClass('btnLayerMid')) {
+            console.log('중간올리기');
             $('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
             $('.popupArea').animate({ 'bottom': '174px' }, "fast");
+            $('.gestureArea').animate({ "height": "528px" }, "fast");
             $('.wc-console, wc-message-pane').show();
+            $('#animationDiv').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
             $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02-1').addClass('topIcon02');
             $('.btnMin').css({ 'right': '58px', 'display': 'inline-block' });
@@ -132,13 +137,13 @@ $(function () {
     });
     
 	//챗봇 팝업 동작 (동영상)
-    $(document).on('click', '.wc-card-play > .non-adaptive-content', function () {
-        var movPopTitle = $(this).children().eq(1).attr('alt');
-        $('#movTitle').text(movPopTitle);
-        var movPopUrl = $(this).children().eq(2).attr('alt');
-        $('#video').attr('src', movPopUrl);
-        $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1", "display": "block" }, "fast").fadeIn("fast");
-    });
+    //$(document).on('click', '.wc-card-play > .non-adaptive-content', function () {
+    //    var movPopTitle = $(this).children().eq(1).attr('alt');
+    //    $('#movTitle').text(movPopTitle);
+    //    var movPopUrl = $(this).children().eq(2).attr('alt');
+    //    $('#video').attr('src', movPopUrl);
+    //    $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1", "display": "block" }, "fast").fadeIn("fast");
+    //});
     //챗봇 제스처 동작
     var startGesture = 0;
     $('.topGestureArea').click(function () {
@@ -222,65 +227,130 @@ $(function () {
         });
     });
 
-    //동영상 영역 호출
-    $(document).on('click', '.wc-card-play > div > .playImg', function () {
-        console.log('mov');
-        //$('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
-        $('.img-wrapper, .map-wrapper').fadeOut();
-        $("#video").attr('src', '');
-        var movPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
-        $('#movTitle').text(movPopTitle);
-        var movPopUrl = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
-        $('#video').attr('src', movPopUrl);
-        $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
-        //$(this).parent().addClass('on');
-    });
-    //이미지 영역 호출
+    //팝업 영역 호출
     $(document).on('click', '.ac-image', function () {
-        //$('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
-        $('.mov-wrapper, .map-wrapper').fadeOut();
+        var popType = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
+        console.log("popType :: " + popType);
+
         $("#video").attr('src', '');
-        $('#imgDiv > div').remove();
-        var manyImg = false;
-        var imgPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
-        var imgUrl = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
-        var imgCnt = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
-        $('#imgTag').attr('src', imgUrl);
-        $('#imgTitle').text(imgPopTitle);
-        $('.img-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
-        //$(this).parent().addClass('on');
+
+        if (popType == "img") { // IMG
+            $('.mov-wrapper, .map-wrapper, .reel-wrapper').fadeOut();
+            $('#imgDiv > div').remove();
+            var manyImg = false;
+            var imgPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+            var imgUrl = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
+            var imgCnt = $(this).parent().parent().parent().children().eq(0).children().eq(3).attr('alt');
+            $('#imgTag').attr('src', imgUrl);
+            $('#imgTitle').text(imgPopTitle);
+            $('.img-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+        } else if (popType == "play") { // PLAY
+            $('.img-wrapper, .map-wrapper, .reel-wrapper').fadeOut();
+            var movPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+            var movPopUrl = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
+            $('#movTitle').text(movPopTitle);
+            $('#video').attr('src', movPopUrl);
+            $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+        } else if (popType == "map") {  // MAP
+            $('.mov-wrapper, .img-wrapper, .reel-wrapper').fadeOut();
+            $('#mapArea > div').remove();
+            $('#mapArea').add("<div id='map' style='border:1px solid #000;'></div>").appendTo('#mapArea');
+            var mapTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+            $('#mapTitle').text(mapTitle);
+            var coordinate = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
+            var _temp = coordinate.split(',');
+            var longitude = _temp[0];
+            var latitude = _temp[1];
+            /* V3로 변경*/
+            var position = new naver.maps.LatLng(longitude, latitude);
+            var map = new naver.maps.Map('map', {
+                center: position,
+                zoom: 12,
+                size: new naver.maps.Size(568, 318)
+            });
+            var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(longitude, latitude),
+                map: map
+            });
+            $('.map-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+        } else if (popType == "reel") { // REEL
+            $('.img-wrapper, .map-wrapper, .mov-wrapper').fadeOut();
+
+            var reelPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+            $('#reelTitle').text(reelPopTitle);
+            if ($('.reel-wrapper').css('display', 'block')) {
+                $('#image').reel({
+                    images: "assets/image/car/000##.jpg",
+                    frames: 60,
+                    cw: true,
+                    brake: 10,
+                    throwable: 10
+                });
+            }
+
+            $('.reel-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+        }
     });
+
+    //동영상 영역 호출
+    //$(document).on('click', '.wc-card-play > div > .playImg', function () {
+    //    console.log('mov');
+    //    //$('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
+    //    $('.img-wrapper, .map-wrapper').fadeOut();
+    //    $("#video").attr('src', '');
+    //    var movPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
+    //    $('#movTitle').text(movPopTitle);
+    //    var movPopUrl = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+    //    $('#video').attr('src', movPopUrl);
+    //    $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+    //    //$(this).parent().addClass('on');
+    //});
+    //이미지 영역 호출
+    //$(document).on('click', '.ac-image', function () {
+    //    //$('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
+    //    $('.mov-wrapper, .map-wrapper').fadeOut();
+    //    $("#video").attr('src', '');
+    //    $('#imgDiv > div').remove();
+    //    var manyImg = false;
+    //    var imgPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+    //    var imgUrl = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
+    //    var imgCnt = $(this).parent().parent().parent().children().eq(0).children().eq(3).attr('alt');
+    //    $('#imgTag').attr('src', imgUrl);
+    //    $('#imgTitle').text(imgPopTitle);
+    //    $('.img-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+    //    //$(this).parent().addClass('on');
+    //});
     //지도 영역 호출
-    $(document).on('click', '.wc-card-map > div > .mapImg', function () {
-        console.log('map');
-        //('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
-        $('.mov-wrapper, .img-wrapper').fadeOut();
-        $("#video").attr('src', '');
+    //$(document).on('click', '.wc-card-map > div > .mapImg', function () {
+    //    console.log('map');
+    //    //('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
+    //    $('.mov-wrapper, .img-wrapper').fadeOut();
+    //    $("#video").attr('src', '');
 
-        $('#mapArea > div').remove();
-        $('#mapArea').add("<div id='map' style='border:1px solid #000;'></div>").appendTo('#mapArea');
-        var mapTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
-        $('#mapTitle').text(mapTitle);
-        var coordinate = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
-        var _temp = coordinate.split(',');
-        var longitude = _temp[0];
-        var latitude = _temp[1];
+    //    $('#mapArea > div').remove();
+    //    $('#mapArea').add("<div id='map' style='border:1px solid #000;'></div>").appendTo('#mapArea');
+    //    var mapTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
+    //    $('#mapTitle').text(mapTitle);
+    //    var coordinate = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
+    //    var _temp = coordinate.split(',');
+    //    var longitude = _temp[0];
+    //    var latitude = _temp[1];
 
-        /* V3로 변경*/
-        var position = new naver.maps.LatLng(longitude, latitude);
-        var map = new naver.maps.Map('map', {
-            center: position,
-            zoom: 12,
-            size: new naver.maps.Size(568, 318)
-        });
+    //    /* V3로 변경*/
+    //    var position = new naver.maps.LatLng(longitude, latitude);
+    //    var map = new naver.maps.Map('map', {
+    //        center: position,
+    //        zoom: 12,
+    //        size: new naver.maps.Size(568, 318)
+    //    });
 
-        var marker = new naver.maps.Marker({
-            position: new naver.maps.LatLng(longitude, latitude),
-            map: map
-        });
-        $('.map-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
-        //$(this).parent().addClass('on');
-    });
+    //    var marker = new naver.maps.Marker({
+    //        position: new naver.maps.LatLng(longitude, latitude),
+    //        map: map
+    //    });
+    //    $('.map-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
+    //    //$(this).parent().addClass('on');
+    //});
 
     //마이크 ON/OFF
     $('.ttsMic').click(function () {

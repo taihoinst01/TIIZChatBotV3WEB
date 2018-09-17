@@ -49,9 +49,13 @@
 .popHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 571px; position: relative;}
 .popBody{background-color: #fbfbfb;height:318px; position: relative;}
 .btnTopClose{background: url("../image/chatbotStyle/btn_close.png") no-repeat;  width:17px;height:17px;display: inline-block;top: 13px; right: 10px;position: absolute;border:none;}
+.imgBox img{width:568px}
+.popTxt{text-align:center; position:absolute; bottom:11px; width:100%}
+.popTxt span{background-color: #bcbcbc; color: #FFF; border-radius: 5px; padding: 4px 10px 5px; font-size: 12px}
 
 /* gesture Area */
 .gestureArea{opacity:1;position: absolute;right:381px;bottom:0;width:250px;height:528px;display:none;background-color:#fff;z-index:1000}
 .gestureTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
 .gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}
 .gestureBody{background-color: #fbfbfb;height:490px; position: relative;}
+
