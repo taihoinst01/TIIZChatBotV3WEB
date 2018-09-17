@@ -159,7 +159,7 @@ $(function () {
     //닫기 버튼
     $('.btnTopClose').click(function () {
         $("#video").attr('src', '');
-        $('.mov-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "slow").fadeOut("slow");
+        $('.mov-wrapper, .img-wrapper, .map-wrapper, .reel-wrapper').hide().animate({ "right": "-380px", "opacity": "0", "display": "none" }, "slow").fadeOut("slow");
     });
 
     //현재위치사용승인

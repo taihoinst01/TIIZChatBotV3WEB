@@ -39,8 +39,9 @@
 
 /* media Icon */
 .playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
-.imgImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
-.mapImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+.imgImg {background: url("../image/chatbotStyle/d_icn_img.png");width:34px;height:34px;transition:.5s ease;opacity:1;position:absolute;top:40%;left:85%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+.mapImg {background: url("../image/chatbotStyle/ico_map_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
+.reelImg {background: url("../image/chatbotStyle/ico_reel_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
 
 /* popup Area */
 .popupArea{opacity:0;position: absolute;right:0;bottom: 174px;width:570px;height:354px;display:none;background-color:#fff;z-index:1500}
