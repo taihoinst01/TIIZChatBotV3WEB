@@ -108,7 +108,6 @@ $(function () {
     });
     $(document).on('click', '.wc-header [class*=btnLayer]', function () {
         if ($(this).hasClass('btnLayerMid')) {
-            console.log('중간올리기');
             $('.wc-chatview-panel').animate({ "height": "528px" }, "fast");
             $('.popupArea').animate({ 'bottom': '174px' }, "fast");
             $('.gestureArea').animate({ "height": "528px" }, "fast");
