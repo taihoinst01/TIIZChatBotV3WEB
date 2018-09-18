@@ -122,7 +122,7 @@ function startButton(event) {
         recognition.stop();
         return;
     }
-    alert(event);
+    
     final_transcript = '';
     recognition.lang = 'ko-KR';
     recognition.start();
