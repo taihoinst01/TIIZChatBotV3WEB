@@ -89,7 +89,7 @@ $(function () {
 
     //챗봇 마이크 생성
     $(".wc-console > div").add(
-        "<div class='ttsMic ttsMicBlack'>&nbsp</div > ").appendTo(".wc-console");
+        "<div class='ttsMic ttsMicBlack' onclick='startButton(event)'>&nbsp</div > ").appendTo(".wc-console");
 
     //챗봇창 버튼 동작
     $('.btnClose').click(function () {
@@ -167,8 +167,8 @@ $(function () {
     $(document).on('click', '.wc-list button:contains("현재 위치 사용 승인")', function () {
         navigator.geolocation.getCurrentPosition(function (position) {
             var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
-            alert("현재 위치: 위도(" + pos.lat + "), 경도(" + pos.lng + ")");
-            alert($('#conversationId').val());
+            //alert("현재 위치: 위도(" + pos.lat + "), 경도(" + pos.lng + ")");
+            //alert($('#conversationId').val());
             //var directLineUrl = "https://northamerica.directline.botframework.com";
             var directLineUrl = "https://directline.botframework.com";
             var secretKey = "FhoZRDuRE_8.cwA.VUA.XDqPTho3xJJJTwF14KTPZeyo0QZ5plfns2nMUS0h99I";	//USWEST

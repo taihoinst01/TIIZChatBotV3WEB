@@ -4,11 +4,11 @@
     "\\webapps",
     "\\webapps\\ROOT",
     "\\webapps\\ROOT\\assets",
-    "\\webapps\\ROOT\\assets\\image",
+    "\\webapps\\ROOT\\assets\\css",
     "\\webapps\\ROOT\\assets\\image\\chatbotStyle",
     "\\webapps\\ROOT\\assets\\image\\product",
     "\\webapps\\ROOT\\assets\\js"
   ],
-  "SelectedNode": "\\webapps\\ROOT\\assets\\js\\ui.js",
+  "SelectedNode": "\\webapps\\ROOT\\assets\\js\\jquery-ui.js",
   "PreviewInSolutionExplorer": false
 }

@@ -3128,11 +3128,13 @@
                             t.onCardAction(e.type, e.value), n.stopPropagation()
                         }
                     };
-                switch (e.contentType) {
+                switch (e.contentType) {                    
                     case "application/vnd.microsoft.card.hero":
                         if (e.content.card_division == "play") {
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
+                            //TTS 적용 
+                            lfn_speakTTS(e.content.text);
                             return e.content.images && e.content.images.forEach(function (t) {
                                 return r.addImage(t.url)
                             }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
@@ -3148,7 +3150,8 @@
                             console.log("제스너 no : " + e.content.gesture);
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
-                            
+                            //TTS 적용 
+                            lfn_speakTTS(e.content.text);
                             // KSO 2018.06.21 gesture loading 여부 확인 후 해당 gesture 번호 실행, gesture 로딩 이후에 실행 됨
                             // gesture num( 0 ~ 19 ) 까지 있음
                             if ($('#animationDiv').hasClass('gOn')) {
@@ -7118,7 +7121,8 @@
                     ref: function(t) {
                         return e.div = t
                     },
-                    onClick: function(t) {
+                    onClick: function (t) {
+                        console.log(t);
                         return e.onClick(t)
                     }
                 }, t, timeDiv)
@@ -7554,7 +7558,9 @@
                             onClick: this.props.onClickActivity
                         }, o.createElement("div", {
                             className: "wc-message wc-message-from-" + r,
-                            ref: function (t) {
+                                ref: function (t) {
+                                //tts
+                                    //lfn_speakTTS(t);
                                 return e.messageDiv = t
                             }
                         }, o.createElement("div", {
@@ -7569,7 +7575,9 @@
                             onClick: this.props.onClickActivity
                         }, o.createElement("div", {
                             className: "wc-message wc-message-from-" + r,
-                            ref: function (t) {
+                                ref: function (t) {
+                                    //tts
+                                    //lfn_speakTTS(t);
                                 return e.messageDiv = t
                             }
                         }, o.createElement("div", {
@@ -7751,6 +7759,12 @@
                                 t.textInput.value = '';
                                 $('.hiddenText').attr('value', '');
                             }
+                            //KSO (autocomplete)
+                            if (($('.sttText').attr('value') != '') && (t.textInput.value !== '')) {
+                                t.props.inputText = t.textInput.value;
+                                t.textInput.value = '';
+                                $('.sttText').attr('value', '');
+                            }
                             //KSO (menu 부분 현재 사용x)
                             if ((t.props.inputText === 'return home') && (t.textInput.value == '')) {
                                 t.props.inputText = '';
@@ -7766,15 +7780,23 @@
                         ,o.createElement("div", {
                             className: "hiddenText"
                         })
+                        ,o.createElement("div", {
+                            className: "sttText"
+                        })
                         ), o.createElement("label", {
                         className: r,
                         onClick: function () {
-
                             //KSO (autocomplete)
                             if (($('.hiddenText').attr('value') != '') && (t.textInput.value !== '')) {
                                 t.props.inputText = t.textInput.value;
                                 t.textInput.value = '';
                                 $('.hiddenText').attr('value', '');
+                            }
+                            //STT
+                            if (($('.sttText').attr('value') != '') && (t.textInput.value !== '')) {
+                                t.props.inputText = t.textInput.value;
+                                t.textInput.value = '';
+                                $('.sttText').attr('value', '');
                             }
                             //KSO (menu부분 현재 사용x)
                             if ((t.props.inputText === '' || t.props.inputText === 'return home') && (t.textInput.value !== '')) {
