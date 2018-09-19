@@ -5,10 +5,8 @@
     "\\webapps\\ROOT",
     "\\webapps\\ROOT\\assets",
     "\\webapps\\ROOT\\assets\\css",
-    "\\webapps\\ROOT\\assets\\image",
-    "\\webapps\\ROOT\\assets\\image\\chatbotStyle",
     "\\webapps\\ROOT\\assets\\js"
   ],
-  "SelectedNode": "\\webapps\\ROOT\\assets\\js\\ui.js",
+  "SelectedNode": "\\webapps\\ROOT\\assets\\js\\autocompleteword.js",
   "PreviewInSolutionExplorer": false
 }

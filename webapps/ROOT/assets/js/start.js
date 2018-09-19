@@ -1,5 +1,5 @@
 ﻿$(function () {
-	$('.bot-wrap').hide();
+	//$('.bot-wrap').hide();    //처음에 숨기기
 
 	var ie = (function (){
 		if (window.ActiveXObject === undefined) return null;
@@ -32,8 +32,14 @@ if (isMobile()) {   //모바일 환경
 		location.href = "index_m.html";
 	});
 } else {    // 웹 환경
-    $(document).on('click', '#botChatBtn', function () {
-		$('.wc-chatview-panel').css('bottom', 0).show();
-        $('.bot-wrap').show();
-	});
+
+    // 1. 처음 로딩시 표출
+    $('.wc-chatview-panel').css('bottom', 0).show();
+    $('.bot-wrap').show();
+
+    // 2. 클릭시 챗봇 표출 (사용하려면 위에 숨기기 부분 주석 제거 해줘야함)
+    //$(document).on('click', '#botChatBtn', function () {
+	//	$('.wc-chatview-panel').css('bottom', 0).show();
+    //  $('.bot-wrap').show();
+	//});
 }

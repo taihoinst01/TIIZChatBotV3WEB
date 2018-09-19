@@ -4,6 +4,11 @@ $(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });
 
+    $(document).on('click', '#botChatBtn', function () {
+		$('.wc-chatview-panel').css('bottom', 0).show();
+      $('.bot-wrap').show();
+	});
+
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
         "<div class='reel-wrapper popupArea'>" +
@@ -135,14 +140,6 @@ $(function () {
         }
     });
     
-	//챗봇 팝업 동작 (동영상)
-    //$(document).on('click', '.wc-card-play > .non-adaptive-content', function () {
-    //    var movPopTitle = $(this).children().eq(1).attr('alt');
-    //    $('#movTitle').text(movPopTitle);
-    //    var movPopUrl = $(this).children().eq(2).attr('alt');
-    //    $('#video').attr('src', movPopUrl);
-    //    $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1", "display": "block" }, "fast").fadeIn("fast");
-    //});
     //챗봇 제스처 동작
     var startGesture = 0;
     $('.topGestureArea').click(function () {
@@ -290,66 +287,6 @@ $(function () {
             $('.reel-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
         }
     });
-
-    //동영상 영역 호출
-    //$(document).on('click', '.wc-card-play > div > .playImg', function () {
-    //    console.log('mov');
-    //    //$('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
-    //    $('.img-wrapper, .map-wrapper').fadeOut();
-    //    $("#video").attr('src', '');
-    //    var movPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
-    //    $('#movTitle').text(movPopTitle);
-    //    var movPopUrl = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
-    //    $('#video').attr('src', movPopUrl);
-    //    $('.mov-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
-    //    //$(this).parent().addClass('on');
-    //});
-    //이미지 영역 호출
-    //$(document).on('click', '.ac-image', function () {
-    //    //$('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
-    //    $('.mov-wrapper, .map-wrapper').fadeOut();
-    //    $("#video").attr('src', '');
-    //    $('#imgDiv > div').remove();
-    //    var manyImg = false;
-    //    var imgPopTitle = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
-    //    var imgUrl = $(this).parent().parent().parent().children().eq(0).children().eq(2).attr('alt');
-    //    var imgCnt = $(this).parent().parent().parent().children().eq(0).children().eq(3).attr('alt');
-    //    $('#imgTag').attr('src', imgUrl);
-    //    $('#imgTitle').text(imgPopTitle);
-    //    $('.img-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
-    //    //$(this).parent().addClass('on');
-    //});
-    //지도 영역 호출
-    //$(document).on('click', '.wc-card-map > div > .mapImg', function () {
-    //    console.log('map');
-    //    //('.wc-card-play, .wc-card-img, .wc-card-map').parent().removeClass('on');
-    //    $('.mov-wrapper, .img-wrapper').fadeOut();
-    //    $("#video").attr('src', '');
-
-    //    $('#mapArea > div').remove();
-    //    $('#mapArea').add("<div id='map' style='border:1px solid #000;'></div>").appendTo('#mapArea');
-    //    var mapTitle = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
-    //    $('#mapTitle').text(mapTitle);
-    //    var coordinate = $(this).parent().parent().parent().children().eq(0).children().eq(1).attr('alt');
-    //    var _temp = coordinate.split(',');
-    //    var longitude = _temp[0];
-    //    var latitude = _temp[1];
-
-    //    /* V3로 변경*/
-    //    var position = new naver.maps.LatLng(longitude, latitude);
-    //    var map = new naver.maps.Map('map', {
-    //        center: position,
-    //        zoom: 12,
-    //        size: new naver.maps.Size(568, 318)
-    //    });
-
-    //    var marker = new naver.maps.Marker({
-    //        position: new naver.maps.LatLng(longitude, latitude),
-    //        map: map
-    //    });
-    //    $('.map-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "fast");
-    //    //$(this).parent().addClass('on');
-    //});
 
     //마이크 ON/OFF
     $('.ttsMic').click(function () {
