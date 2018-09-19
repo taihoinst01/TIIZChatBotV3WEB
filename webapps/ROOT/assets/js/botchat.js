@@ -7754,9 +7754,7 @@
                     var n = this.props.listening || a.Speech.SpeechRecognizer.speechIsAvailable() && !this.props.inputText.length,
                         r = i.classList("wc-send", n && "hidden"),
                         s = i.classList("wc-mic", !n && "hidden", this.props.listening && "active", !this.props.listening && "inactive");
-
                     
-
                     return o.createElement("div", {
                         className: e
                     },
@@ -7796,21 +7794,20 @@
                             return t.props.onChangeText(t.textInput.value)
                         },
                         onKeyPress: function (e) {
-
                             //KSO (autocomplete)
-                            if (($('.hiddenText').attr('value') != '') && (t.textInput.value !== '')) {
+                            if (($('.hiddenText').attr('value') != '') && (t.textInput.value !== '') && (e.key == 'Enter')) {
                                 t.props.inputText = t.textInput.value;
                                 t.textInput.value = '';
                                 $('.hiddenText').attr('value', '');
                             }
-                            //KSO (autocomplete)
-                            if (($('.sttText').attr('value') != '') && (t.textInput.value !== '')) {
+                            //STT
+                            if (($('.sttText').attr('value') != '') && (t.textInput.value !== '') && (e.key == 'Enter')) {
                                 t.props.inputText = t.textInput.value;
                                 t.textInput.value = '';
                                 $('.sttText').attr('value', '');
                             }
                             //KSO (menu 부분 현재 사용x)
-                            if ((t.props.inputText === 'return home') && (t.textInput.value == '')) {
+                            if ((t.props.inputText === 'return home') && (t.textInput.value == '') && (e.key == 'Enter')) {
                                 t.props.inputText = '';
                             }
                             return t.onKeyPress(e)
@@ -7824,6 +7821,7 @@
                         ,o.createElement("div", {
                             className: "hiddenText"
                         })
+                        //KSO (stt hidden 추가)
                         ,o.createElement("div", {
                             className: "sttText"
                         })
