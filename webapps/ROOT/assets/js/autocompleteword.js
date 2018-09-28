@@ -1,6 +1,22 @@
 $(function () {
-    var autocomplete_text = [
-        "타임서버가 무엇입니까?",
+
+    //ex) Sample
+    //$.ajax({
+    //    url: '/jsLang',
+    //    dataType: 'json',
+    //    type: 'POST',
+    //    success: function (data) {
+    //        language = data.lang;
+    //        console.log(language);
+    //        "dog": [
+    //          "웰시코기",
+    //          "포메라니안",
+    //          "푸들"
+    //        ]
+    //    }
+    //});
+
+    var data = ["타임서버가 무엇입니까?",
         "타임서버 종류?",
         "타임모니터가 무엇입니까?",
         "타임디스플레이 종류는?",
@@ -60,8 +76,10 @@ $(function () {
         "OCXO가 머에요?",
         "TCXO가 머에요?",
         "타임서버 오실레이터가 머에요?",
-        "타임서버 긴급장애시 응급조치가  무엇인가요?"
-    ];
+        "타임서버 긴급장애시 응급조치가  무엇인가요?"];
+
+
+    var autocomplete_text = data;
 
     //keyboard action으로 담을 변수
     var keyboardText = '';  
