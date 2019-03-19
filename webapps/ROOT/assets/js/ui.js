@@ -1,3 +1,4 @@
+
 $(function () {
     $('#wrapper').css({ 'height': ($(document).height()) + 'px'});
     $(window).resize(function () {
@@ -7,7 +8,9 @@ $(function () {
     $(document).on('click', '#botChatBtn', function () {
 		$('.wc-chatview-panel').css('bottom', 0).show();
       $('.bot-wrap').show();
-	});
+    });
+
+    
 
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
@@ -62,14 +65,13 @@ $(function () {
     //제스처 케릭터 영역 생성
     $("#bot > div").add(
         "<div class='gesture-wrapper gestureArea'>" +
-            "<div class='gestureHeader'>" +
-                "<span id='gestureTitle' class='gestureTitle'></span>" +
-            "</div>" +
+          
             "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
             "</div>" +
         "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
+    /*
     $(".wc-header > span").add(
         "<span class='chatTitle'></span>" +
         "<span class='chatTitleText'><strong>TIIZ</strong> ChatBot V3</span>" +
@@ -79,6 +81,7 @@ $(function () {
         "<span class='topGestureArea'>" +
         "<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
         "</span>").appendTo(".wc-header");
+    */
 
     //챗봇 메뉴창 생성
     $(".wc-chatview-panel > div").add(
@@ -126,6 +129,9 @@ $(function () {
             $('.popupArea').animate({ 'bottom': ($(window).height() - 352) + 'px' }, "fast");
             $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
             $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02').addClass('topIcon02-1');
+            $('.gestureArea').animate({ "height": ($(document).height()) + 'px' }, "fast");
+            $('.wc-console, wc-message-pane').show();
+            $('#animationDiv').show();
         }
     });
 

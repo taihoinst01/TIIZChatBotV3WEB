@@ -19,23 +19,54 @@
 
 
 /* chat view */
-.wc-list{background-color: #f1f3f6}
-.wc-card{margin-bottom:18px}
+/*.wc-list{background-color: #f1f3f6}*/
+.wc-card {
+    margin-bottom: 18px;
+    background-color: #fff;
+    border-radius: 50px;
+}
 .timeStampBot{font-size: 12px; color: #868a8f;line-height: 15px; text-align: left; background: #f1f3f6;padding-top: 3px !important; position:absolute; bottom:0}
 .timeStampUser{font-size: 12px;color: #868a8f;line-height: 15px;text-align: right;padding-top:3px !important}
-.ac-container{padding:6px 6px 6px 12px !important; border-radius:5px; max-width:312px}
+.ac-container{padding:6px 6px 6px 12px !important; border-radius:5px; max-width:312px;}
 
 /* chat input */
 .wc-menu{cursor: pointer;display: inline-block;width:60px;height: 50px;background-color: #fff;}
 .menuIcon{width:42px;height:23px;background-color:#00aad2;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}
-.sendIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}
+/*.sendIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}*/
+.sendIcon {
+    background: url("../image/chatbotStyle/send.png") no-repeat;
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    margin-top: 25px;
+    right: 130px;
+    z-index: 200000;
+}
 .menuBox{background-color:#fff;width:250px;height:62px;position:absolute;bottom:53px;display:none;text-align:center;box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC; border-radius: 4px;}
 .menuReStartBtn{color:#fff;background-color:#302f35;height:30px;font-size:12px}
 .menuReStartBtn > span {position:relative; top:5px}
 .menuSelectBtn{border-top:1px solid #f0f1f4; width:100%; height:30px;}
 .menuSelectBtn > span {position:relative; top:4px}
-.ttsMicBlack{background: url("../image/chatbotStyle/micBlack_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}
-.ttsMicRed{background: url("../image/chatbotStyle/micRed_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}
+/*.ttsMicBlack{background: url("../image/chatbotStyle/micBlack_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}
+.ttsMicRed{background: url("../image/chatbotStyle/micRed_50.png");width:50px;height:50px;position:absolute;bottom:0;right:60px;cursor:pointer}*/
+.ttsMicBlack {
+    background: url("../image/chatbotStyle/mike.png") no-repeat;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 106px;
+    height: 106px;
+    right: 550px;
+}
+.ttsMicRed {
+    background: url("../image/chatbotStyle/mike_on.png") no-repeat;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 106px;
+    height: 106px;
+    
+    right: 550px;
+}
 
 /* media Icon */
 .playImg {background: url("../image/chatbotStyle/ico_play_50.png");width:50px;height:50px;transition:.5s ease;opacity:1;position:absolute;top:25%;left:50%;transform:translate(-50%, -50%);-ms-transform: translate(-50%, -50%);cursor:pointer}
@@ -54,7 +85,7 @@
 .popTxt span{background-color: #bcbcbc; color: #FFF; border-radius: 5px; padding: 4px 10px 5px; font-size: 12px}
 
 /* gesture Area */
-.gestureArea{opacity:1;position: absolute;right:381px;bottom:0;width:250px;height:528px;display:none;background-color:#fff;z-index:1000}
+.gestureArea{opacity:1;position: absolute;left:0px;top:0px;bottom:0;width:250px;height:528px;display:none;background-color:#fff;z-index:1000}
 .gestureTitle{font-size:20px;color:#FFF;position:absolute;top:5px;left:15px}
 .gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}
 .gestureBody{background-color: #fbfbfb;height:490px; position: relative;}

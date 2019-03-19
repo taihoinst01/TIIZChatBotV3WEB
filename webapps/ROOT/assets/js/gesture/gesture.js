@@ -114,7 +114,7 @@ function playAnimation(fbxName) {
         //원근 투영 을 사용하는 카메라 .
         //camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 3, 200000);
         camera = new THREE.PerspectiveCamera(45, 249 / 487, 3, 200000);     //케릭터 생성위치(width/height)
-        camera.position.set(100, 3000, 7500);
+        camera.position.set(1000, 1500, 7500);
 
         //궤도 제어는 카메라가 표적 주위를 도는 것을 허용합니다. 
         //controls = new THREE.OrbitControls(camera);
@@ -123,7 +123,8 @@ function playAnimation(fbxName) {
 
         //장면을 사용하면 three.js에서 렌더링 할 내용의 위치를 ​​설정할 수 있습니다. 이것은 물건, 조명 및 카메라를 배치하는 곳입니다.
         scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xa0a0a0);
+        //scene.background = new THREE.Color(0xa0a0a0);
+        scene.background = new THREE.TextureLoader().load("file:///D:/프로젝트관련사항/MTC/chatbot_design/img/bg.png");
 
         //하늘색에서 바탕색으로 색상이 희미 해져 장면 바로 위에 배치 된 광원입니다. 이 빛은 그림자를 드리 우는 데 사용할 수 없습니다.
         light = new THREE.HemisphereLight(0xffffff);
@@ -205,7 +206,7 @@ function playAnimation(fbxName) {
 
         //출력 캔버스를 장치 픽셀 비율을 고려하여 (너비, 높이)로 조정하고 (0, 0)부터 시작하여 뷰포트를 해당 크기에 맞게 설정합니다.
         //renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setSize(249, 487);     //챗팅창에 고려한 canvas 사이즈 임의 조정
+        renderer.setSize(1080, 1920);     //챗팅창에 고려한 canvas 사이즈 임의 조정
 
         container.append(renderer.domElement);
         //window.addEventListener('resize', onWindowResize, false); //resize 안되게 주석

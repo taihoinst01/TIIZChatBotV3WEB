@@ -36,10 +36,19 @@ if (isMobile()) {   //모바일 환경
     // 1. 처음 로딩시 표출
     $('.wc-chatview-panel').css('bottom', 0).show();
     $('.bot-wrap').show();
-
+    
     // 2. 클릭시 챗봇 표출 (사용하려면 위에 숨기기 부분 주석 제거 해줘야함)
     //$(document).on('click', '#botChatBtn', function () {
 	//	$('.wc-chatview-panel').css('bottom', 0).show();
     //  $('.bot-wrap').show();
 	//});
 }
+
+$(document).ready(function () {
+
+    
+    $('.topGestureIcon').css({ 'float': 'left' });
+    playAnimation('ChatBot_AniAll01');
+    
+    $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
+});
