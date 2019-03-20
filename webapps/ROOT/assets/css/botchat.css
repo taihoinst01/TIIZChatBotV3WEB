@@ -151,6 +151,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     top: 900px;
     bottom: 0px;
     z-index: 100000;
+    outline: none;
 }
 
 /* messages */
