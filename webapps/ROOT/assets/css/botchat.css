@@ -25,7 +25,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   visibility: hidden; }
 
 .wc-header {
-  /*background-color: #302f35;*/
+    /*background-color: #302f35;*/
+    /*
   box-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-sizing: content-box;
   color: #ffffff;
@@ -37,7 +38,9 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1; }
+  z-index: 1; 
+*/
+}
 
 .wc-time {
   color: #999999;
@@ -135,15 +138,16 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     right: 0;
     margin-bottom: 15px;
     top: 800px;
+    margin-top: 30px;
 }
 
 /* views */
 .wc-chatview-panel {
     width: 700px;
-    height: 900px;
+    height: 950px;
     overflow: hidden;
     position: absolute;
-    left: 500px;
+    left: 350px;
     top: 900px;
     bottom: 0px;
     z-index: 100000;
@@ -408,13 +412,19 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 /* from bot */
 .wc-message-from-bot {
-  float: left;
-  margin-left: 40px; }
+    float: left;
+    /*margin-left: 40px; */
+}
 
 .wc-message-from-bot .wc-message-content {
   /*background-color: #FFF;*/
   color: #000000; 
 }
+
+    .wc-message-from-bot .wc-message-content svg {
+        /*background-color: #FFF;*/
+        height: 30px;
+    }
 
 .wc-message-from-bot svg.wc-message-callout path {
   fill: #eceff1; }
@@ -438,11 +448,13 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   vertical-align: middle; }
 
 .wc-console label {
+    /*
   cursor: pointer;
   display: inline-block;
   height: 50px;
   width: 60px;
   background-color:#fff
+        */
 }
 
 .wc-console svg {
@@ -461,6 +473,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     box-shadow: 2px 3px 4px #9a9a9a;
     font-size: 20px;
     padding-left: 40px;
+    padding-right: 30px;
 }
 
 .wc-send svg {
@@ -479,7 +492,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     left: 150px;
     top: 20px;
     right: 110px;
-    
+    width: 530px;
 }
 
 .wc-send {

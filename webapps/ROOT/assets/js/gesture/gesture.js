@@ -124,7 +124,7 @@ function playAnimation(fbxName) {
         //장면을 사용하면 three.js에서 렌더링 할 내용의 위치를 ​​설정할 수 있습니다. 이것은 물건, 조명 및 카메라를 배치하는 곳입니다.
         scene = new THREE.Scene();
         //scene.background = new THREE.Color(0xa0a0a0);
-        scene.background = new THREE.TextureLoader().load("file:///D:/프로젝트관련사항/MTC/chatbot_design/img/bg.png");
+        scene.background = new THREE.TextureLoader().load("./assets/image/chatbotStyle/bg.png");
 
         //하늘색에서 바탕색으로 색상이 희미 해져 장면 바로 위에 배치 된 광원입니다. 이 빛은 그림자를 드리 우는 데 사용할 수 없습니다.
         light = new THREE.HemisphereLight(0xffffff);
