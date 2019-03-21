@@ -6807,7 +6807,7 @@
             fontFamily: '"Nanum Gothic", sans-serif',
             fontSizes: {
                 small: 12,
-                normal: 20,
+                normal: 32,
                 medium: 15,
                 large: 17,
                 extraLarge: 19
@@ -7949,7 +7949,7 @@
                 messageFailed: "couldn't send",
                 messageSending: "sending",
                 timeSent: " at %1",
-                consolePlaceholder: "Please enter your message.",
+                consolePlaceholder: "'마이크버튼'을 누르고 말하세요",
                 listeningIndicator: "Listening..."
             },
             ja: {

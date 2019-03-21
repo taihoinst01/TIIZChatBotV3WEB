@@ -143,11 +143,11 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 /* views */
 .wc-chatview-panel {
-    width: 700px;
+    width: 950px;
     height: 950px;
     overflow: hidden;
     position: absolute;
-    left: 350px;
+    left: 50px;
     top: 900px;
     bottom: 0px;
     z-index: 100000;
@@ -409,7 +409,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:30px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:20px;background:#00aad2;border-radius:50px;font-size:20px;}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:25px;background:#00aad2;border-radius:50px;font-size:32px;}
 
 /* from bot */
 .wc-message-from-bot {
@@ -420,6 +420,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-message-from-bot .wc-message-content {
   /*background-color: #FFF;*/
   color: #000000; 
+  margin-left: 300px;
 }
 
     .wc-message-from-bot .wc-message-content svg {
@@ -472,7 +473,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     border-radius: 50px;
     border: none;
     box-shadow: 2px 3px 4px #9a9a9a;
-    font-size: 20px;
+    font-size: 32px;
     padding-left: 40px;
     padding-right: 30px;
 }
@@ -493,7 +494,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     left: 150px;
     top: 20px;
     right: 110px;
-    width: 530px;
+    width: 770px;
+    height: 90px;
 }
 
 .wc-send {
