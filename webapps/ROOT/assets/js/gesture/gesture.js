@@ -206,7 +206,8 @@ function playAnimation(fbxName) {
 
         //출력 캔버스를 장치 픽셀 비율을 고려하여 (너비, 높이)로 조정하고 (0, 0)부터 시작하여 뷰포트를 해당 크기에 맞게 설정합니다.
         //renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setSize(1080, 1920);     //챗팅창에 고려한 canvas 사이즈 임의 조정
+        //renderer.setSize(1080, 1920);     //챗팅창에 고려한 canvas 사이즈 임의 조정
+        renderer.setSize(1080, 2112);     //챗팅창에 고려한 canvas 사이즈 임의 조정
 
         container.append(renderer.domElement);
         //window.addEventListener('resize', onWindowResize, false); //resize 안되게 주석
