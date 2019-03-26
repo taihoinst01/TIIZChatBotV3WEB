@@ -23,4 +23,9 @@ function speakTTS(word) {
     utter.rate = 1;
     utter.pitch = 1;
     synthesis.speak(utter);
+    taihoTest();
+}
+
+function taihoTest() {
+    console.log("stt 진행후 테스트 입니다.");
 }
