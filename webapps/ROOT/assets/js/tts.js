@@ -23,14 +23,4 @@ function speakTTS(word) {
     utter.rate = 1;
     utter.pitch = 1;
     synthesis.speak(utter);
-    test();
-}
-
-var t = 0;
-function test() {
-    if ($("#wrapper.wc-message-wrapper list").length) {
-        alert("test====" + $("#wrapper.wc-message-wrapper list").length);
-        // 속성값이 존재함.
-
-    }
 }
