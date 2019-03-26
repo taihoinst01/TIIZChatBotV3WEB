@@ -3202,6 +3202,7 @@
                             // gesture num( 0 ~ 19 ) 까지 있음
                             if ($('#animationDiv').hasClass('gOn')) {
                                 playAction(e.content.gesture);
+                                taihoOpacity();
                             }
 
                             return e.content.images && e.content.images.forEach(function (t) {

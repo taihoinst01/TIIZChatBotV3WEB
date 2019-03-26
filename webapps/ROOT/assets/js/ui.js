@@ -319,3 +319,9 @@ $(function () {
 //    $('.menuBox').removeClass('on').addClass('off');
 //    $('.menuBox').css({ 'display': 'none' });
 //}
+
+function taihoOpacity() {
+    //console.log("$('.ac-container').length===" + $('.ac-container').length);
+    $(".wc-message-wrapper:nth-last-child(4n+0)").css("opacity", "0.1");
+    $(".wc-message-wrapper:nth-last-child(3n+0)").css("opacity", "0.4");
+}

@@ -80,7 +80,6 @@ if (!('webkitSpeechRecognition' in window)) {
                 final_transcript = event.results[i][0].transcript;
                 console.log("final_transcript = " + final_transcript);
                 //recognizing = false;
-                taihoTest();
             } else {
                 //interim_transcript += event.results[i][0].transcript;
                 interim_transcript = event.results[i][0].transcript;
@@ -161,7 +160,3 @@ function showInfo(s) {
 //    copy_info.style.display = 'none';
 //    email_info.style.display = 'none';
 //}
-
-function taihoTest() {
-    console.log("taiho test");
-}
