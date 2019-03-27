@@ -50,4 +50,6 @@ $(document).ready(function () {
     $('.topGestureIcon').css({ 'float': 'left' });
     playAnimation('ChatBot_AniAll01');
     $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
+    $(document).scrollTop($(document).height());
+
 });
