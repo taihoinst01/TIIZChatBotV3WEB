@@ -46,10 +46,10 @@ if (isMobile()) {   //모바일 환경
 
 $(document).ready(function () {
 
-    
+    $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
     $('.topGestureIcon').css({ 'float': 'left' });
     playAnimation('ChatBot_AniAll01');
     $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
-    $(document).scrollTop($(document).height());
-
+    //$(document).scrollTop($(document).height());
+    
 });
