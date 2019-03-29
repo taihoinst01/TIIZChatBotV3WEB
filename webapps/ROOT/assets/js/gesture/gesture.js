@@ -90,15 +90,8 @@ function playAction(actionNum) {
     } else if (actionNum == 19) {
         action.time = 2106.5;
     }
-    //action.setLoop(THREE.LoopOnce);
+    action.loop(THREE.LoopOnce);
     action.play();
-
-    var test = function () {
-        action.time = 1011;
-        action.play();
-    }
-    
-    //setTimeout(playAction(9), 5000);
 }
 
 function playAnimation(fbxName) {
