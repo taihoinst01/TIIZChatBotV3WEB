@@ -12,6 +12,7 @@ function playAction(actionNum) {
     }
     console.log("change actionNum ::: " + actionNum);
     //동작을 맨처음 클릭시에는 action에 애니메이션이 없는 상태이기 때문에 분기처리를 안하고 action.stop()을 하면 에러 발생
+    console.log("action=====" + action);
     if (action != null) {
         action.stop();
     }
