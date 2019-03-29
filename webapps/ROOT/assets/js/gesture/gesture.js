@@ -95,7 +95,6 @@ function playAction(actionNum) {
     action.play();
     setTimeout(function () {
         action.stop();
-        alert("test==========");
     },5000)
 }
 
