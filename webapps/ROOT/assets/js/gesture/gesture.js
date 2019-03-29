@@ -45,7 +45,7 @@ function playAction(actionNum) {
     if (actionNum == 0) {
 
         action.time = 0;
-
+        
     } else if (actionNum == 1) {
 
         action.time = 108;

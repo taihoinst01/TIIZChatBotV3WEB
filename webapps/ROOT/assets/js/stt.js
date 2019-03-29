@@ -9,7 +9,7 @@ if (!('webkitSpeechRecognition' in window)) {
     //start_button.style.display = 'inline-block';
     var recognition = new webkitSpeechRecognition();
     recognition.lang = 'ko-KR';
-    recognition.continuous = false;
+    recognition.continuous = true;
     recognition.interimResults = true;
 
     recognition.onstart = function () {
@@ -21,6 +21,7 @@ if (!('webkitSpeechRecognition' in window)) {
     };
 
     recognition.onerror = function (event) {
+
         if (event.error == 'no-speech') {
             //start_img.src = 'C:/Users/user/source/repos/nhchatbotweb_google/webapps/ROOT/assets/image/mic_img/mic.gif';
             //showInfo('info_no_speech');
@@ -74,6 +75,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
     recognition.onresult = function (event) {
         var interim_transcript = '';
+        
         for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
                 //final_transcript += event.results[i][0].transcript;
@@ -98,6 +100,7 @@ if (!('webkitSpeechRecognition' in window)) {
             $('input[type="text"].wc-shellinput').val('');
             $('.wc-console').removeClass('has-text');
         }
+        final_transcript = '';
     };
 }
 
@@ -133,7 +136,7 @@ function startButton(event) {
     $('.ttsMic').removeClass("ttsMicBlack").addClass("ttsMicRed")
     //showInfo('info_allow');
     //showButtons('none');
-    start_timestamp = event.timeStamp;
+    //start_timestamp = event.timeStamp;
 }
 
 function showInfo(s) {
