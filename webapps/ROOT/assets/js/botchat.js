@@ -3203,6 +3203,7 @@
                             if ($('#animationDiv').hasClass('gOn')) {
                                 playAction(e.content.gesture);
                                 taihoOpacity();
+                                playAction(9);
                             }
 
                             return e.content.images && e.content.images.forEach(function (t) {
@@ -7497,7 +7498,9 @@
                         className: "wc-message-group-content",
                         ref: function(e) {
                             e && (t.scrollContent = e)
+                            //console.log(t.scrollContent.innerHTML);
                         }
+                        
                     }, e))
                 }, e
             }(o.Component);
