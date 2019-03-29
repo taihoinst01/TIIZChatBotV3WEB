@@ -98,7 +98,7 @@ function playAction(actionNum) {
         action.play();
     }
     
-    setTimeout(test, 5000);
+    setTimeout(playAction(9), 5000);
 }
 
 function playAnimation(fbxName) {
