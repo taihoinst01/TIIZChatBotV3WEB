@@ -93,6 +93,11 @@ $(function () {
             "<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
             "</ul>" +
         "</div > ").appendTo(".wc-chatview-panel");
+    //clear button
+    $(".wc-chatview-panel > div").add(
+        "<div class='clearButton'>" +
+        "<button type='button' onClick='clearMessage()'>Clear<br>Message</button>" +
+        "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 마이크 생성
     $(".wc-console > div").add(
@@ -325,4 +330,8 @@ function taihoOpacity() {
     $(".wc-message-wrapper:nth-last-child(5n+0)").css("opacity", "0.0");
     $(".wc-message-wrapper:nth-last-child(4n+0)").css("opacity", "0.1");
     $(".wc-message-wrapper:nth-last-child(3n+0)").css("opacity", "0.3");
+}
+
+function clearMessage() {
+    $('.wc-message-group-content').empty();
 }

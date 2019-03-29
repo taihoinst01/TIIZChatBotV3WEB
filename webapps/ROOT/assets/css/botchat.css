@@ -5,13 +5,17 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 }
 
 .wc-app button {
-  /*background-color: #0063b1;*/
+  background-color: #0063b1;
   border: none;
-  border-radius: 1px;
+  border-radius: 20px;
   color: #ffffff;
   cursor: pointer;
   outline: none;
-  transition: color .2s ease, background-color .2s ease; }
+  transition: color .2s ease, background-color .2s ease; 
+  width: 150px;
+  height: 80px;
+  margin-top: 980px;
+}
 
 .wc-app h1, .wc-app h2, .wc-app h3, .wc-app h4, .wc-app p, .wc-app ul, .wc-app ol {
   margin: 0;

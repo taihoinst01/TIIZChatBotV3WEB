@@ -49,7 +49,7 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
     $('.topGestureIcon').css({ 'float': 'left' });
     playAnimation('ChatBot_AniAll01');
-    startGesture = 7;
+    startGesture = 8;
     $('.gesture-wrapper').show().animate({ "right": "380px", "opacity": "1" }, "slow").fadeIn("slow");
     //$(document).scrollTop($(document).height());
     
