@@ -90,7 +90,7 @@ function playAction(actionNum) {
     } else if (actionNum == 19) {
         action.time = 2106.5;
     }
-    action.loop(THREE.LoopOnce);
+    action.setLoop(THREE.LoopOnce);
     action.play();
 }
 
