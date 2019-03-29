@@ -41,7 +41,8 @@
     position: absolute;
     margin-top: 30px;
     right: 40px;
-    z-index: 200000;
+    z-index: 20;
+    display:none;
 }
 .menuBox{background-color:#fff;width:250px;height:62px;position:absolute;bottom:53px;display:none;text-align:center;box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC; border-radius: 4px;}
 .menuReStartBtn{color:#fff;background-color:#302f35;height:30px;font-size:12px}
@@ -55,14 +56,14 @@
     margin-top: 10px;
     width: 106px;
     height: 106px;
-    right: 810px;
+    right: 10px;
 }
 .ttsMicRed {
     background: url("../image/chatbotStyle/mike_on.png") no-repeat;
     margin-top: 10px;
     width: 106px;
     height: 106px;
-    right: 810px;
+    right: 10px;
 }
 
 /* media Icon */

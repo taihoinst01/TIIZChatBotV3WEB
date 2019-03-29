@@ -130,25 +130,28 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     /*border: 5px solid #dbdee1;*/
     /*background-color:#fff;
         box-sizing: border-box;
+        height: 100px;
+        margin-bottom: 15px;
+        margin-top: 30px;
     */
     bottom: 0;
-    height: 100px;
     left: 0;
-    position: absolute;
+    position: static;
     right: 0;
-    margin-bottom: 15px;
     top: 800px;
-    margin-top: 30px;
 }
 
 /* views */
 .wc-chatview-panel {
+    /*
+
+    */
     width: 950px;
-    height: 950px;
+    height: 1200px;
     overflow: hidden;
     position: absolute;
     left: 50px;
-    top: 1000px;
+    top: 700px;
     bottom: 0px;
     z-index: 100000;
     outline: none;
@@ -496,6 +499,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     right: 110px;
     width: 770px;
     height: 90px;
+    display: none;
 }
 
 .wc-send {
