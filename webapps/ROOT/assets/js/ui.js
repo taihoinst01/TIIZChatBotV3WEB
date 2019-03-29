@@ -326,10 +326,13 @@ $(function () {
 //}
 
 function taihoOpacity() {
-    //console.log("$('.ac-container').length===" + $('.ac-container').length);
-    $(".wc-message-wrapper:nth-last-child(5n+0)").css("opacity", "0.0");
-    $(".wc-message-wrapper:nth-last-child(4n+0)").css("opacity", "0.1");
-    $(".wc-message-wrapper:nth-last-child(3n+0)").css("opacity", "0.3");
+    var checknum = $('.wc-message-wrapper').length;
+    $(".wc-message-wrapper:nth-last-child(7)").css("opacity", "0.0");
+    $(".wc-message-wrapper:nth-last-child(6)").css("opacity", "0.0");
+    $(".wc-message-wrapper:nth-last-child(5)").css("opacity", "0.0");
+    $(".wc-message-wrapper:nth-last-child(4)").css("opacity", "0.1");
+    $(".wc-message-wrapper:nth-last-child(3)").css("opacity", "0.3");
+    
 }
 
 function clearMessage() {

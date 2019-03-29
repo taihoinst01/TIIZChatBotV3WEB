@@ -15,6 +15,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   width: 150px;
   height: 80px;
   margin-top: 980px;
+  font-size: 25px;
 }
 
 .wc-app h1, .wc-app h2, .wc-app h3, .wc-app h4, .wc-app p, .wc-app ul, .wc-app ol {
