@@ -8,7 +8,7 @@ var mixer;
 function playAction(actionNum) {
     console.log("actionNum ::: " + actionNum);
     if (actionNum == undefined || actionNum == '') {
-        actionNum = 3;
+        actionNum = 7;
     }
     console.log("change actionNum ::: " + actionNum);
     //동작을 맨처음 클릭시에는 action에 애니메이션이 없는 상태이기 때문에 분기처리를 안하고 action.stop()을 하면 에러 발생
@@ -90,10 +90,15 @@ function playAction(actionNum) {
     } else if (actionNum == 19) {
         action.time = 2106.5;
     }
-    action.setLoop(THREE.LoopOnce);
+    //action.setLoop(THREE.LoopOnce);
     action.play();
 
-
+    var test = function () {
+        action.time = 1011;
+        action.play();
+    }
+    
+    setTimeout(test, 5000);
 }
 
 function playAnimation(fbxName) {

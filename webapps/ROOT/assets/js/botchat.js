@@ -3203,7 +3203,6 @@
                             if ($('#animationDiv').hasClass('gOn')) {
                                 playAction(e.content.gesture);
                                 taihoOpacity();
-                                setTimeout(playAction(9), 3000);
                             }
 
                             return e.content.images && e.content.images.forEach(function (t) {
