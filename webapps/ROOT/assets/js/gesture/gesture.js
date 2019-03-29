@@ -7,7 +7,7 @@ var clock;
 var mixer;
 function playAction(actionNum) {
     console.log("actionNum ::: " + actionNum);
-    if (actionNum == undefined || actionNum == '') {
+    if (actionNum == undefined) {
         actionNum = 7;
     }
     console.log("change actionNum ::: " + actionNum);
