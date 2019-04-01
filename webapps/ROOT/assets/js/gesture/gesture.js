@@ -46,7 +46,7 @@ function playAction(actionNum) {
     if (actionNum == 0) {
 
         action.time = 0;
-        
+
     } else if (actionNum == 1) {
 
         action.time = 108;
@@ -90,6 +90,8 @@ function playAction(actionNum) {
         action.time = 1967;
     } else if (actionNum == 19) {
         action.time = 2106.5;
+    } else {
+        action.time = 1011;
     }
     //action.setLoop(THREE.LoopOnce);
     action.play();
