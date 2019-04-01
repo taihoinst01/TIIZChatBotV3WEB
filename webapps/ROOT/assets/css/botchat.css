@@ -416,7 +416,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-message-from-me svg.wc-message-callout {
   right: -6px; }
 
-.wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:30px;}
+.wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:42px;}
 .wc-message-from-me .wc-message-content span > span{display: block;padding:25px;background:#00aad2;border-radius:50px;font-size:32px;}
 
 /* from bot */
