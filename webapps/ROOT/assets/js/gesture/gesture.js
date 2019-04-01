@@ -93,6 +93,8 @@ function playAction(actionNum) {
     } else {
         action.time = 1011;
     }
+    console.log("action.time===" + action.time);
+    console.log("actionNum===" + actionNum);
     //action.setLoop(THREE.LoopOnce);
     action.play();
     setTimeout(function () {
