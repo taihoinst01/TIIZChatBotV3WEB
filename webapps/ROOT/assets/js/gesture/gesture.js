@@ -89,7 +89,8 @@ function playAction(actionNum) {
     } else if (actionNum == 18) {
         action.time = 1967;
     } else if (actionNum == 19) {
-        action.time = 2106.5;
+        //action.time = 2106.5;
+        action.time = 2106;
     } else {
         action.time = 1011;
     }
